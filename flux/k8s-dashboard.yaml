@@ -16,10 +16,6 @@ spec:
     replicaCount: 1
     enableSkipLogin: true
     enableInsecureLogin: true
-    ingress:
-      enabled: true
-      hosts:
-        - k8s.dashford.io
     rbac:
       create: true
       clusterAdminRole: true
