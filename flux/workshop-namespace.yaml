@@ -1,3 +1,5 @@
+# Example of a native kubernetes object that flux can apply to the cluster
+
 apiVersion: v1
 kind: Namespace
 metadata:

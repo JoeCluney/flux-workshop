@@ -1,0 +1,26 @@
+# Example of a custom resource definition kubernetes object that flux can apply to the cluster
+
+---
+apiVersion: flux.weave.works/v1beta1
+kind: HelmRelease
+metadata:
+  name: kubernetes-dashboard
+  namespace: workshop
+spec:
+  releaseName: kubernetes-dashboard
+  chart:
+    repository: https://kubernetes-charts.storage.googleapis.com/
+    name: kubernetes-dashboard
+    version: 1.6.0
+  values:
+    replicaCount: 1
+    enableSkipLogin: true
+    enableInsecureLogin: true
+    ingress:
+      enabled: true
+      hosts:
+        - k8s.dashford.io
+    rbac:
+      create: true
+      clusterAdminRole: true
+      clusterReadOnlyRole: false
