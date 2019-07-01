@@ -1,0 +1,27 @@
+git:
+  url: git@github.com:dashford/flux-workshop.git
+  pollInterval: 1m
+  path: "flux"
+  branch: "workshop"
+
+helmOperator:
+  chartsSyncInterval: "1m"
+  create: true
+  createCRD: true
+  logReleaseDiffs: false # enable for debugging, can be useful
+
+memcached:
+  repository: memcached
+  resources:
+    limits:
+      cpu: 100m
+      memory: 628Mi
+    requests:
+      cpu: 50m
+      memory: 512Mi
+
+prometheus:
+  enabled: true
+
+syncGarbageCollection:
+  enabled: true
