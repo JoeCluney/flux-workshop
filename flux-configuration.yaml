@@ -2,7 +2,6 @@ git:
   url: git@github.com:dashford/flux-workshop.git
   pollInterval: 1m
   path: "flux"
-  branch: "workshop"
 
 helmOperator:
   chartsSyncInterval: "1m"
